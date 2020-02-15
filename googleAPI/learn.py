@@ -18,7 +18,27 @@ out = open('output.txt', 'w+')
 location = ['Belize', 'Paris', 'Hong Kong', 'Las Vegas', 'Istanbul', 'Bangkok', 'Venice', 'Amsterdam','Tokyo',
 'Seoul', 'Milan', 'Budapest', 'Taipei', 'Marrakesh', 'Prague', 'Honolulu', 'District of Columbia', 'Cape Town', 'London', 'Moscow']
 
+fileTxt = ['Belize.txt', 'Paris.txt', 'Berlin.txt', 'Las_Vegas.txt', 'Istanbul.txt', 'Bangkok.txt', 'Venice.txt', 'Amsterdam.txt',
+'Tokyo.txt','Seoul.txt', 'Milan.txt', 'Budapest.txt', 'Taipei.txt', 'Marrakesh.txt', 'Prague.txt', 'Honolulu.txt', 
+'District of Columbia.txt', 'Cape_Town.txt', 'London.txt', 'Moscow.txt']
+
 out.write('class,text\n')
+count  = 0
+for text in fileTxt:
+    with open(text, 'r') as myfile:
+        #array of all lines in an array
+        lines = myfile.readlines()
+    
+    for line in lines:
+        #regex to strip a string of punctuation
+        lineNoPunct = re.sub('[^A-Za-z0-9]+', ' ', line)
+        output_str = +',               '+ lineNoPunct +'\n'
+        out.write(output_str)
+
+    count+=1
+
+
+
 
 for locate in location:
     inputFileLine = file.readline()
