@@ -12,7 +12,7 @@ function sendData() {
     contentType : "application/json",
     data : JSON.stringify(data),
     // Push data to cloud
-    url : "/pushMain",
+    url : "/pushMain/",
 
     // Calls once data recieved
     statusCode : {200 : function() { console.log("Sucessfully pushed data"); }}
@@ -40,4 +40,19 @@ function requestData() {
   });
 }
 
-function displayData() { console.log("DEBUG: Display data called"); }
+function displayData() {
+  $.ajax({
+    type : "POST",
+    dataType : "json",
+    contentType : "application/json",
+    url : "/curCords",
+    statusCode : {
+      200 : function(cords) {
+        console.log("Sucessfully asked for data");
+        console.log(cords);
+        // TODO: shove google api here and use cords.cords
+      }
+    }
+
+  });
+}
