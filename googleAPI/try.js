@@ -6,13 +6,5 @@ function main()
 			center: {lat: -34.397, lng: 150.644},
 			zoom: 8
 		  });
-		
-      
-}
-
-
-
-function parseFile()
-{
 
 }
