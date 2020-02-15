@@ -2,13 +2,15 @@ from urllib.request import urlopen
 from urllib.request import urlretrieve
 from selenium import webdriver
 from bs4 import BeautifulSoup
-import numpy as np
 import xml.etree.ElementTree as ET
 import urllib.request
 from enum import Enum
 import json
-import re
-from nltk.corpus import wordnet as guru
+import os
+
+# Set API credentials from json
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:\\Users\\sesch\\Desktop\\GitHub\\VTHACKS7\\scrapeInfo\\image-classification-json.json"
+
 
 def socialMedias(Enum):
 	facebook = 0
@@ -19,10 +21,11 @@ facebookText = []
 twitterText = []
 instagramImages = []
 instagramText = []
+allText = []
 
 # list of tuples of predefined social media names and user handles populated by JSON file
 # Ex: JSON file says facebook, instagram - then it would onl search those two accounts
-websites = {'twitter':'SamSchoedel', 'facebook':'SamSchoedel', 'instagram':'sschoedel'}
+websites = {'twitter':'SamSchoedel', 'facebook':'barackobama', 'instagram':'sschoedel'}
 # social media possibilities:
 # facebook
 # instagram
@@ -69,7 +72,10 @@ def searchInstagram(instagramHandle):
 		src = srcBox.get('src')
 		instagramImages.append(src)
 		imageName += str(i)
-		urllib.request.urlretrieve(str(src), "instagramImages\\" + str(imageName) + ".jpg")
+		try:
+			urllib.request.urlretrieve(str(src), "instagramImages\\" + str(imageName) + ".jpg")
+		except: 
+			print("did not get image url")
 		imageName = imageName.strip(str(i))
 
 	# Wouldn't have to open a tab if this code worked
