@@ -2,37 +2,27 @@
 <!-- Imports  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='initMap.js') }}"></script>
+<link rel="stylesheet" media="all" href="{{ url_for('static', filename='results.css')}}">
 
 <html>
+    <head>
+        <title>Optimal Location Determined</title>
+    </head>
+    <!-- <body onload="displayData()"> -->
+    <body>
 
-<head>
-    <title>This is the title of the webpage!</title>
-    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='index.css')}}">
-</head>
-
-<head>
-    <title>Displaying data</title>
-</head>
-
-<body onload="displayData()">
-    <a>TODO: update this page Nicky pls</a>
-
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-        #map {
-            height: 80%;
-            width: 50%;
-        }
-
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-            height: 80%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-</body>
-
+        <div class="left"> hello
+            <!-- <div class="spacer"></div>
+            <div id="map"></div> -->
+        </div>
+        <!-- <div class="imageBox right">
+            <div class="image1"></div>
+            <div class="image2"></div>
+            <div class="image3"></div>
+        </div> -->
+        <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJxtj9236MbEc16B_D8zDpSIBxXAhmR54&callback=initMap">
+        </script> -->
+    </body>
 </html>
