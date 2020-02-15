@@ -35,8 +35,8 @@ def handle_push():
         row = (data['twitter'], data['instagram'], data['facebook'])
         #TODO: remove print
         print(row)
-    except (ValueError, KeyError, TypeError):
-        return SomeErrorResponse
+    except (ValueError, KeyError, TypeError) as e:
+        return e
 
     #TODO
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
