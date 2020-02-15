@@ -26,10 +26,6 @@ def push_loading():
     print("printLoading recieved");
     return jsonify({"status": "ok"}), 200
 
-@app.route('/results/')
-def push_results():
-    return render_template('results.html')
-
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():
     #Parse data
