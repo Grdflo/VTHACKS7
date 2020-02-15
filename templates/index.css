@@ -35,10 +35,14 @@ body{
       text-decoration: none;
       font-family: sans-serif;
       box-sizing: border-box;
-      background: linear-gradient(90deg,#03a9f4,#08e4c7,#03f484,#41f45f,#03f484,#08e4c7);
-      background-size: 400%;
+      background: linear-gradient(90deg,#03a9f4,#41f45f);
+      background-size: 200%;
       border-radius: 200px;
-      animation: animate 8s linear infinite;
+
+  }
+  a:hover
+  {
+    animation: animate 8s alternate infinite;
   }
   @keyframes animate
   {
@@ -46,9 +50,26 @@ body{
       {
         background-position: 0%;
       }
-      100%
+
+    100%
       {
-          background-position: 400%;
+        background-position: 200%;
       }
+
   }
+  /*
+  a:before{
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg,#03a9f4,#41f45f);
+      background-size: 400%;
+      border-radius: 200px;
+      filter: blur(20px);
+  }
+  */
   
