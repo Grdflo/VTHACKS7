@@ -1,14 +1,22 @@
 function sendData() {
-  data = {first : $("#first").val(), last : $("#last").val()};
+  // The data we should send.
+  data = {
+    twitter : $("#twit").val(),
+    instagram : $("#insta").val(),
+    facebook : $("#fb").val()
+  };
+  // The ajax poster
   $.ajax({
     type : "POST",
     dataType : "json",
     contentType : "application/json",
     data : JSON.stringify(data),
+    // Change?
     url : "/user"
   });
 }
 
+/* TODO: revamp this function for final screen
 function getData() {
   $.ajax({
     dataType : "json",
@@ -40,3 +48,4 @@ function getData() {
     }
   });
 }
+*/

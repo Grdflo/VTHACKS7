@@ -1,7 +1,6 @@
 #!/usr/bin/python
 @app.route('/index/', methods=["GET","POST"])
 def login_page():
-
     error = ''
     try:
 
