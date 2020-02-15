@@ -16,12 +16,20 @@ directions_result = gmaps.directions("Sydney Town Hall",
                                      mode="transit",
                                      departure_time=now)
 
+
 #given a place - find the location(lat and long) and place_id
-map_result = gmaps.find_place('VT', 'textquery',
+map_result = gmaps.find_place('fairfax city', 'textquery',
                                 fields=['geometry/location', 'place_id'],
-                                location_bias='point:90,90', language = 'en-AU')
+                                location_bias='point:10,10', language = 'en-AU')
 
 latitude  = map_result.get('candidates')[0].get('geometry').get('location').get('lat')
 longitude  = map_result.get('candidates')[0].get('geometry').get('location').get('lng')
-print ("lat:",latitude);
+print (latitude, longitude);
 print ('long:', longitude);
+
+
+near = gmaps.places_nearby([latitude, longitude],keyword='resturant',
+                                  language = 'en-AU',
+                                  radius = 10)
+
+print(near)
