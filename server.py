@@ -9,8 +9,8 @@ app = Flask(__name__, static_url_path='/static')
 def push_index():
     return render_template('index.html');
 
-@app.route('/loading', methods=['POST'])
-def push_loadingScreen():
+@app.route('/loading')
+def push_loading_screen():
     return render_template('loading.html');
 
 
