@@ -35,6 +35,8 @@ body{
       text-decoration: none;
       font-family: sans-serif;
       box-sizing: border-box;
-      background: linear-gradient(90deg,#03a9f4,#41f45f,#03a9f4,#41f45f)
-      
+      background: linear-gradient(90deg,#03a9f4,#41f45f,#03a9f4,#41f45f);
+      background-size: 400%;
+      border-radius: 30px;
+
   }
