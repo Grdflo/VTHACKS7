@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='')
 
@@ -19,13 +19,13 @@ def push_results():
 
 @app.route('/push', methods=['POST'])
 def handle_push():
-    if not request.json:
-        abort(400)
-    if 'AnsibleTower' in request.headers and request.headers['AnsibleTower'] == 'xSecretx':
-        # Trigger some other external action
-        print("Request dictionary: {}".format(request.json))
-        return jsonify({'status': 'triggered'}), 201
-    return jsonify({'status': 'ok'}), 200
+    try:
+        data = json.loads(request.data);
+        row = (data['twitter'], data['instagram'], data['facebook']);
+        print(row)
+    except (ValueError, KeyError, TypeError):
+        return SomeErrorResponse
+    return jsonify({"status": "ok"}), 200;
 
 if __name__ == '__main__':
     print("Listening...")
