@@ -8,6 +8,14 @@ app = Flask(__name__, static_url_path='')
 def push_index():
     return render_template('index.html');
 
+@app.route('/loading')
+def push_loading():
+    return render_template('loading.html');
+
+@app.route('/results')
+def push_results():
+    return render_template('results.html');
+
 
 @app.route('/push', methods=['POST'])
 def handle_push():
