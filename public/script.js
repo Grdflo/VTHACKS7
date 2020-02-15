@@ -12,7 +12,7 @@ function sendData() {
     contentType : "application/json",
     data : JSON.stringify(data),
     // Change?
-    url : "/user"
+    url : "/push"
   });
 }
 
