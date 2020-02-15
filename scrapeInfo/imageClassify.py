@@ -27,6 +27,7 @@ def detect_labels(path):
                 response.error.message))
     return labelsList
 
+
 def detect_landmarks(path):
     landmarksList = []
     client = vision.ImageAnnotatorClient()
@@ -50,10 +51,8 @@ def detect_landmarks(path):
     return landmarksList
 
 
-link = 'C:\\Users\\sesch\\Desktop\\hacksimages\\prague.jpg'
-
-labels = detect_labels(link)
-landmarks = detect_landmarks(link)
-
-total = labels + landmarks
-print(total)
+def getAssociations(path):
+    labels = detect_labels(path)
+    landmarks = detect_landmarks(path)
+    totalAssociations = labels + landmarks
+    return totalAssociations

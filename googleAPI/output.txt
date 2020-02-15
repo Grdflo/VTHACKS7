@@ -1,4 +1,5 @@
 class,text
+<<<<<<< HEAD
 Belize,               DON T JUST SEE THE WONDER OF BELIZE EXPERIENCE IT 
 Belize,               Belize currency exchange is extremely easy for American visitors The Belize dollar is locked at 2 Belize 1 USD So it s very easy to see how much something is costing in USD when you go shopping Most accommodations and tours are listed in US prices and most restaurants shops etc are listed in BZ Nearly everyplace readily accepts USD currency Most also should accept traveler s checks as long as you write your passport number or driver s license number on the back Large bills anything above a 20 are a little more difficult to cash Shopkeepers generally ask you to spend a minimum amount 
 Belize,               ATMs are also available across the country particularly in most tourist destinations including Placenica Punta Gorda Belmopan Dangriga Belize City San Pedro Ambergris Caye Caye Caulker Orange Walk San Ignacio and Corozal 
@@ -223,3 +224,5 @@ Seoul,               On the 118th floor there s the Sky Deck with the world s hi
 Seoul,               Inside the tower are offices luxury residences and a hotel There s also an aquarium and a large shopping mall The tower is home to a concert hall and a state of the art 21 screen MoviePlex 
 Seoul,               First built in 1395 Gyeongbokgung Palace is the largest of Seoul s five grand palaces built during the powerful Joseon dynasty Destroyed and rebuilt several times over the centuries it was restored to its original glory after the Second World War and totally restored in the 1990s 
 Seoul,               Within the palace grounds you can also find the National Palace Museum of Korea and the National Folk Museum and both are worth a visit The palace museum is especially fascinating as it presents items from the palaces of the Joseon Dynasty This includes priceless antiques and artwork as well as everyday items for cooking cleaning and daily life The National Folk Museum focuses on items from daily life as well as clothing and dioramas to tell the story of the Korean people since prehistoric times 
+=======
+>>>>>>> b704589de1d549dd3c6e878c3f96d78eff70bd2a

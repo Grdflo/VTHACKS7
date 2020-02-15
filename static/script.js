@@ -26,15 +26,17 @@ function requestData() {
     type : "POST",
     dataType : "json",
     contentType : "application/json",
-    data : JSON.stringify(data),
     // Wait for data to load
-    url : "/pushLoading",
+    url : "/pushLoading/",
 
     statusCode : {
       200 : function() {
         // TODO: What do I do if I get a sucessfull call? change webpage to
         // modified results.html
+        console.log("DEBUG: REQUEST DATA FINISHED");
       }
     }
   });
 }
+
+function displayData() { console.log("DEBUG: Display data called"); }
