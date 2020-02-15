@@ -15,7 +15,7 @@ def push_loading_screen():
 
 @app.route('/results/')
 def push_results():
-    return render_template('results.html');
+    return render_template('results.html')
 
 @app.route('/pushLoading/', methods=['POST'])
 def push_loading():
@@ -23,7 +23,7 @@ def push_loading():
     #PROCESS DATA HERE:--------------------------
 
     #PROCESS DATA HERE:--------------------------
-    print("printLoading recieved");
+    print("printLoading recieved")
     return jsonify({"status": "ok"}), 200
 
 @app.route('/results/')
