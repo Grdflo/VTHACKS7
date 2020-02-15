@@ -34,6 +34,7 @@ function requestData() {
         // TODO: What do I do if I get a sucessfull call? change webpage to
         // modified results.html
         console.log("DEBUG: REQUEST DATA FINISHED");
+        window.location.pathname = '/results'
       }
     }
   });
