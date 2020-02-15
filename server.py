@@ -33,7 +33,7 @@ def handle_push():
         #Try parsing data
         data = json.loads(request.data);
         row = (data['twitter'], data['instagram'], data['facebook']);
-        #TODO: remove prin
+        #TODO: remove print
         print(row)
     except (ValueError, KeyError, TypeError):
         return SomeErrorResponse
