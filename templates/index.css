@@ -35,7 +35,7 @@ body{
       text-decoration: none;
       font-family: sans-serif;
       box-sizing: border-box;
-      background: linear-gradient(90deg,#03a9f4,#41f45f,#03a9f4,#41f45f);
+      background: linear-gradient(90deg,#03a9f4,#08e4c7,#03f484,#41f45f,#03f484,#08e4c7);
       background-size: 400%;
       border-radius: 200px;
       animation: animate 8s linear infinite;
