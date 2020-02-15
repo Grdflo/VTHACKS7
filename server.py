@@ -9,15 +9,21 @@ app = Flask(__name__, static_url_path='')
 def push_index():
     return render_template('index.html');
 
-@app.route('/loading')
+@app.route('/pushLoading', methods=['POST'])
 def push_loading():
+    #TODO: return only when done loading help
+    #PROCESS DATA HERE:--------------------------
+
+    #PROCESS DATA HERE:--------------------------
     return render_template('loading.html');
 
-@app.route('/results', methods=['POST'])
+@app.route('/results')
 def push_results():
     return render_template('results.html');
 
-@app.route('/push', methods=['POST'])
+@app.route('/pushLoading', methods=['POST'])
+
+@app.route('/pushMain', methods=['POST'])
 def handle_push():
     #Parse data
     try:
@@ -33,7 +39,6 @@ def handle_push():
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
 
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
-
 
     return jsonify({"status": "ok"}), 200;
 
