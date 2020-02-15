@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import json
 from flask import Flask, request, abort, jsonify, render_template
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='')
 
 
 #Preroute definitions
@@ -9,13 +9,11 @@ app = Flask(__name__, static_url_path='/static')
 def push_index():
     return render_template('index.html');
 
-@app.route('/loading')
+@app.route('/loading/')
 def push_loading_screen():
     return render_template('loading.html');
 
-
-
-@app.route('/pushLoading', methods=['POST'])
+@app.route('/pushLoading/', methods=['POST'])
 def push_loading():
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
@@ -23,12 +21,12 @@ def push_loading():
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200;
 
-@app.route('/results')
+@app.route('/results/')
 def push_results():
     return render_template('results.html');
 
 
-@app.route('/pushMain', methods=['POST'])
+@app.route('/pushMain/', methods=['POST'])
 def handle_push():
     #Parse data
     try:
