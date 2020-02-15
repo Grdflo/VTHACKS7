@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Poppins&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -12,83 +15,89 @@ input[type=text] {
 
 .header
 {
-    color: rgb(255, 255, 255);
-    font-family:sans-serif;
+  color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
 }
 .subheader{
-    position: absolute;
-    left: 1%;
-    color: rgb(255, 255, 255);
-    font-family:sans-serif;
+  position: absolute;
+  left: 1%;
+  color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
 
 }
+h1{
+  left:100px;
+}
 .container{
-    text-align:center;
-    margin-top: 120px;
+  text-align:center;
+  margin-top: 120px;
     
 }
 .btn {
-    background-color: rgb(161, 161, 161); /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    font-family: "montserrat";
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
-  a{
-      position: absolute;
-      top: 30%;
-      left: 40%;
-      /*
-      transform: translate (-50%, -50%);
-      */
-      width: 400px;
-      height: 400px;
-      text-align: center;
-      line-height: 400px;
-      color: #fff;
-      font-size: 34px;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
-      background: linear-gradient(90deg,#4aa5cf,#2bdf61);
-      background-size: 200%;
-      border-radius: 200px;
-      animation: animate 4s alternate infinite;
+  background-color: rgb(161, 161, 161); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+a{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  text-decoration: none;
+  /*
+  transform: translate (-50%, -50%);
+  */
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  line-height: 400px;
+  color: #fff;
+  font-size: 34px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(90deg,#60b6e7,#89e28f);
+  background-size: 200%;
+  border-radius: 200px;
+  animation: animate 3s alternate infinite;
 
 
-  }
+}
 
-  @keyframes animate
+@keyframes animate
+{
+  0%
   {
-      0%
-      {
-        background-position: 0%;
-      }
-
-    100%
-      {
-        background-position: 100%;
-      }
-
+    background-position: 0%;
   }
-  
-  a:before{
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-      z-index: -1;
-      background: linear-gradient(90deg,#03a9f4,#41f45f);
-      background-size: 400%;
-      border-radius: 200px;
-      filter: blur(2px);
+
+100%
+  {
+    background-position: 100%;
   }
-  
-  
+
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#60b6e7,#89e28f);
+  background-size: 400%;
+  border-radius: 200px;
+  filter: blur(2px);
+}
