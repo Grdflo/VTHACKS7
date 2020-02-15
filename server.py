@@ -3,6 +3,7 @@ import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
 
+#parseInputs
 pIs = [];
 
 
@@ -24,6 +25,7 @@ def push_loading():
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
     #pIs[0][1]
+    print(pIs);
 
     #PROCESS DATA HERE:--------------------------
     print("printLoading recieved")
