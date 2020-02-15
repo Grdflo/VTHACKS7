@@ -7,11 +7,15 @@ app = Flask(__name__, static_url_path='', static_folder="static")
 #Preroute definitions
 @app.route('/')
 def push_index():
-    return render_template('index.html');
+    return render_template('index.html')
 
 @app.route('/loading/')
 def push_loading_screen():
-    return render_template('loading.html');
+    return render_template('loading.html')
+
+@app.route('/results/')
+def push_results():
+    return render_template('results.html');
 
 @app.route('/pushLoading/', methods=['POST'])
 def push_loading():
@@ -19,12 +23,12 @@ def push_loading():
     #PROCESS DATA HERE:--------------------------
 
     #PROCESS DATA HERE:--------------------------
-    return jsonify({"status": "ok"}), 200;
+    print("printLoading recieved");
+    return jsonify({"status": "ok"}), 200
 
 @app.route('/results/')
 def push_results():
-    return render_template('results.html');
-
+    return render_template('results.html')
 
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():
@@ -35,17 +39,18 @@ def handle_push():
         row = (data['twitter'], data['instagram'], data['facebook']);
         my_query = query_db(row, (3,))
         json_output = json.dumps(my_query)
+
         #TODO: remove print
         print(row)
-    except (ValueError, KeyError, TypeError):
-        return SomeErrorResponse
+    except (ValueError, KeyError, TypeError) as e:
+        return e
 
     #TODO
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
 
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
 
-    return jsonify({"status": "ok"}), 200;
+    return jsonify({"status": "ok"}), 200
 
 if __name__ == '__main__':
     print("Listening...")
