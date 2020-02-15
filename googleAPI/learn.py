@@ -10,17 +10,16 @@ import re
 
 
 
-url = 'trial.txt'
-file= open(url,"r+")
+
 
 out = open('output.txt', 'w+')
 
 location = ['Belize', 'Paris', 'Hong Kong', 'Las Vegas', 'Istanbul', 'Bangkok', 'Venice', 'Amsterdam','Tokyo',
-'Seoul', 'Milan', 'Budapest', 'Taipei', 'Marrakesh', 'Prague', 'Honolulu', 'District of Columbia', 'Cape Town', 'London', 'Moscow']
+'Seoul']#, 'Milan', 'Budapest', 'Taipei', 'Marrakesh', 'Prague', 'Honolulu', 'Cairo', 'Cape Town', 'London', 'Moscow']
 
 fileTxt = ['Belize.txt', 'Paris.txt', 'Berlin.txt', 'Las_Vegas.txt', 'Istanbul.txt', 'Bangkok.txt', 'Venice.txt', 'Amsterdam.txt',
-'Tokyo.txt','Seoul.txt', 'Milan.txt', 'Budapest.txt', 'Taipei.txt', 'Marrakesh.txt', 'Prague.txt', 'Honolulu.txt', 
-'District of Columbia.txt', 'Cape_Town.txt', 'London.txt', 'Moscow.txt']
+'Tokyo.txt','Seoul.txt'] 
+#,'Milan.txt', 'Budapest.txt', 'Taipei.txt', 'Marrakesh.txt', 'Prague.txt', 'Honolulu.txt', 'Cairo.txt', 'Cape_Town.txt', 'London.txt', 'Moscow.txt']
 
 out.write('class,text\n')
 count  = 0
@@ -31,24 +30,16 @@ for text in fileTxt:
     
     for line in lines:
         #regex to strip a string of punctuation
+        if (line == '\n'):
+            continue
         lineNoPunct = re.sub('[^A-Za-z0-9]+', ' ', line)
-        output_str = +',               '+ lineNoPunct +'\n'
+        output_str = location[count] +',               '+ lineNoPunct +'\n'
         out.write(output_str)
 
     count+=1
 
-
-
-
-for locate in location:
-    inputFileLine = file.readline()
-    lineNoPunct = re.sub('[^A-Za-z0-9]+', ' ', inputFileLine)
-    output_str = locate+',               '+ lineNoPunct +'\n'
-    out.write(output_str)
-
-
 out.close()
-file.close()
+
 
 
 data = pd.read_csv('output.txt')
@@ -79,6 +70,6 @@ while True:
     predict_vec = vec.transform(predict)
     res = clf.predict(predict_vec)
     print(predict[0], '=>', res[0])
-
+    print (predict_vec)
 
 
