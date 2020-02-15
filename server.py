@@ -1,25 +1,24 @@
 #!/usr/bin/python
-@app.route('/index/', methods=["GET","POST"])
-def login_page():
-    error = ''
-    try:
 
-        if request.method == "POST":
+from flask import Flask, request, abort, jsonify, render_template
+app = Flask(__name__, static_url_path='')
 
-            attempted_username = request.form['username']
-            attempted_password = request.form['password']
 
-            #flash(attempted_username)
-            #flash(attempted_password)
+@app.route('/')
+def push_index():
+    return render_template('index.html');
 
-            if attempted_username == "admin" and attempted_password == "password":
-                return redirect(url_for('dashboard'))
 
-            else:
-                error = "Invalid credentials. Try Again."
+@app.route('/push', methods=['POST'])
+def handle_push():
+    if not request.json:
+        abort(400)
+    if 'AnsibleTower' in request.headers and request.headers['AnsibleTower'] == 'xSecretx':
+        # Trigger some other external action
+        print("Request dictionary: {}".format(request.json))
+        return jsonify({'status': 'triggered'}), 201
+    return jsonify({'status': 'ok'}), 200
 
-        return render_template("login.html", error = error)
-
-    except Exception as e:
-        #flash(e)
-        return render_template("login.html", error = error)
+if __name__ == '__main__':
+    print("Listening...")
+    app.run(debug=True, host='0.0.0.0', port=8085)
