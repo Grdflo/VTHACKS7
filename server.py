@@ -13,11 +13,7 @@ def push_index():
 def push_loading():
     return render_template('loading.html');
 
-@app.route('/results')
-def push_results():
-    return render_template('results.html');
-
-@app.route('/process', methods=['POST'])
+@app.route('/results', methods=['POST'])
 def push_results():
     return render_template('results.html');
 
