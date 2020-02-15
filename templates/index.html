@@ -1,6 +1,11 @@
 <!doctype html>
 <!-- Imports  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+
 <a href="loading">DEBUG: LOADING</a>
 <p></p>
 <a href="results">DEBUG: RESULTS</a>
@@ -20,8 +25,9 @@
     Twitter:<br><input type="text" name="Twitter" id="twit"></br>
     Instagram:<br><input type="text" name="Instagram" id="insta"></br>
     Facebook:<br><input type="text" name="Facebook" id="fb"></br>
-    <br><button class="btn" onclick="sendData()">Send</button></br>
-    <br><button class="btn" onclick="getData()">Refresh</button></br>
+
+
+    <br><button onclick="sendData()" class="btn btn-raised btn-primary">Send</button> &nbsp
     <div id="users"></div>
 	<br><br>
 	</div>

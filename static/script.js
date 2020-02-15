@@ -11,11 +11,27 @@ function sendData() {
     dataType : "json",
     contentType : "application/json",
     data : JSON.stringify(data),
-    // Change?
-    url : "/push"
+    // Call code to push to clooud
+    url : "/push",
+
+    statusCode : {
+      200 : function() {
+        // Call backend code
+        $.ajax({
+          type : "POST",
+          dataType : "json",
+          contentType : "application/json",
+          data : JSON.stringify(data),
+          url : "/push"
+
+        });
+      }
+    }
+
   });
 }
 
+// IGNOREME:
 /* TODO: revamp this function for final screen
 function getData() {
   $.ajax({
