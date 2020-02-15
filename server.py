@@ -3,6 +3,8 @@ import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
 
+pIs = [];
+
 
 #Preroute definitions
 @app.route('/')
@@ -21,6 +23,7 @@ def push_results():
 def push_loading():
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
+    #pIs[0][1]
 
     #PROCESS DATA HERE:--------------------------
     print("printLoading recieved");
@@ -43,6 +46,7 @@ def handle_push():
 
     #TODO
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
+    pIs.append(row);
 
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
 

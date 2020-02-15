@@ -38,3 +38,5 @@ function requestData() {
     }
   });
 }
+
+function displayData() { console.log("DEBUG: Display data called"); }
