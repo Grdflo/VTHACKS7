@@ -62,10 +62,10 @@ a{
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
-  background: linear-gradient(90deg,#3487b8,#5fb464);
+  background: linear-gradient(90deg,#60b6e7,#89e28f);
   background-size: 200%;
   border-radius: 200px;
-  animation: animate 4s alternate infinite;
+  animation: animate 3s alternate infinite;
 
 
 }
@@ -96,7 +96,7 @@ a:before{
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(90deg,#3487b8,#5fb464);
+  background: linear-gradient(90deg,#60b6e7,#89e28f);
   background-size: 400%;
   border-radius: 200px;
   filter: blur(2px);
