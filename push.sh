@@ -1,9 +1,9 @@
 #Commits everything and pushes
 #Usage: ./push.sh <COMMIT MSG>
-if [ $# -le 0 ]
+if [ $# -ge 1 ]
 then
 	git add .
-	git commit -m \"${0}\"
+	git commit -m \"$@\"
 	git push
 else
 	echo "Invalid argument. Usage: ./push.sh <COMMIT MSG>"
