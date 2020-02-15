@@ -20,23 +20,35 @@ body{
   }
   a{
       position: absolute;
-      top: 40%;
+      top: 30%;
       left: 40%;
       /*
       transform: translate (-50%, -50%);
       */
       width: 400px;
-      height: 120px;
+      height: 400px;
       text-align: center;
-      line-height: 120px;
+      line-height: 400px;
       color: #fff;
-      font-size: 24px;
+      font-size: 34px;
       text-transform: uppercase;
       text-decoration: none;
       font-family: sans-serif;
       box-sizing: border-box;
       background: linear-gradient(90deg,#03a9f4,#41f45f,#03a9f4,#41f45f);
       background-size: 400%;
-      border-radius: 30px;
-
+      border-radius: 200px;
+      animation: animate 8s linear infinite;
   }
+  @keyframes animate
+  {
+      0%
+      {
+        background-position: 0%;
+      }
+      100%
+      {
+          background-position: 400%;
+      }
+  }
+  
