@@ -1,20 +1,23 @@
 function sendData() {
-  data = {first : $("#first").val(), last : $("#last").val()} $.ajax({
+  data = {first : $("#first").val(), last : $("#last").val()};
+  $.ajax({
     type : "POST",
     dataType : "json",
     contentType : "application/json",
     data : JSON.stringify(data),
     url : "/user"
-  })
+  });
 }
 
 function getData() {
   $.ajax({
     dataType : "json",
-    url : "/list",
+    url : "/index", // Maybe wrong was /list
+
+    // In the case we succeed:
     success : function(data) {
       $('#users').html("")
-
+      // Appendeach
       $.each(data, function(index, value) {
         $('#users').append(value.first + "  " + value.last + "<button id=\"" +
                            value.last + "\">Delete</button>" +
