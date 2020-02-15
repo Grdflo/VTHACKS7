@@ -2,7 +2,9 @@
 <!-- Imports  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script script src="script.js"></script>
+
+<!-- maybe change back to scripts.js-->
+<script script src="../googleAPI/try.js"></script>
 
 <html>
 
@@ -20,8 +22,23 @@
     <!-- TODO
 	Get a loading screen.
 -->
-
-
+<style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 80%;
+      width: 50%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 80%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJxtj9236MbEc16B_D8zDpSIBxXAhmR54&callback=main"
+	  async defer></script>
 </body>
 
 </html>

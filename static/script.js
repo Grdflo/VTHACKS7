@@ -11,7 +11,7 @@ function sendData() {
     dataType : "json",
     contentType : "application/json",
     data : JSON.stringify(data),
-    // Call code to push to clooud
+    // Call code to push to cloud
     url : "/push",
 
     statusCode : {
