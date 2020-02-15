@@ -13,13 +13,13 @@ input[type=text] {
 .header
 {
     color: rgb(255, 255, 255);
-    font-family: sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .subheader{
     position: absolute;
     left: 1%;
     color: rgb(255, 255, 255);
-    font-family: sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 
 }
 .container{
