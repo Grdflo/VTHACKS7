@@ -1,6 +1,26 @@
 body{
     margin: 0;
     padding: 0;
+    background: rgb(83, 83, 83);
+}
+/*
+input[type=text] {
+    background-color: rgb(255, 255, 255);
+    color: white;
+  }
+  */
+
+.header
+{
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+.subheader{
+    position: absolute;
+    left: 1%;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+
 }
 .container{
     text-align:center;
@@ -8,7 +28,7 @@ body{
     
 }
 .btn {
-    background-color: #4CAF50; /* Green */
+    background-color: rgb(161, 161, 161); /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -35,15 +55,14 @@ body{
       text-decoration: none;
       font-family: sans-serif;
       box-sizing: border-box;
-      background: linear-gradient(90deg,#03a9f4,#41f45f);
+      background: linear-gradient(90deg,#4aa5cf,#2bdf61);
       background-size: 200%;
       border-radius: 200px;
+      animation: animate 4s alternate infinite;
+
 
   }
-  a:hover
-  {
-    animation: animate 8s alternate infinite;
-  }
+
   @keyframes animate
   {
       0%
@@ -53,11 +72,11 @@ body{
 
     100%
       {
-        background-position: 200%;
+        background-position: 100%;
       }
 
   }
-  /*
+  
   a:before{
       content: '';
       position: absolute;
@@ -69,7 +88,7 @@ body{
       background: linear-gradient(90deg,#03a9f4,#41f45f);
       background-size: 400%;
       border-radius: 200px;
-      filter: blur(20px);
+      filter: blur(2px);
   }
-  */
+  
   
