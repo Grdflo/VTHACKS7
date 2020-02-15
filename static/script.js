@@ -21,6 +21,7 @@ function sendData() {
 
 // Calls when waiting for data
 function requestData() {
+  console.log("DEBUG: REQUEST DATA CALLED");
   $.ajax({
     type : "POST",
     dataType : "json",
