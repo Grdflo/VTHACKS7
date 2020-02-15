@@ -9,13 +9,19 @@ app = Flask(__name__, static_url_path='/static')
 def push_index():
     return render_template('index.html');
 
+@app.route('/loading', methods=['POST'])
+def push_loadingScreen():
+    return render_template('loading.html');
+
+
+
 @app.route('/pushLoading', methods=['POST'])
 def push_loading():
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
 
     #PROCESS DATA HERE:--------------------------
-    return render_template('loading.html');
+    return jsonify({"status": "ok"}), 200;
 
 @app.route('/results')
 def push_results():
