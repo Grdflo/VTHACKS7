@@ -1,6 +1,6 @@
 #Commits everything and pushes
 #Usage: ./push.sh <COMMIT MSG>
-if [ $# -eq 1 ]
+if [ $# -le 0 ]
 then
 	git add .
 	git commit -m \"${0}\"
