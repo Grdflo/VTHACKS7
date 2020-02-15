@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import json
 from flask import Flask, request, abort, jsonify, render_template
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__, static_url_path='/static')
 
 
 #Preroute definitions
@@ -21,7 +21,6 @@ def push_loading():
 def push_results():
     return render_template('results.html');
 
-@app.route('/pushLoading', methods=['POST'])
 
 @app.route('/pushMain', methods=['POST'])
 def handle_push():
