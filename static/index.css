@@ -25,6 +25,9 @@ input[type=text] {
   font-family: 'Poppins', sans-serif;
 
 }
+h1{
+  left:100px;
+}
 .container{
   text-align:center;
   margin-top: 120px;
@@ -45,6 +48,7 @@ a{
   position: absolute;
   top: 30%;
   left: 40%;
+  text-decoration: none;
   /*
   transform: translate (-50%, -50%);
   */
@@ -58,7 +62,7 @@ a{
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
-  background: linear-gradient(90deg,#4aa5cf,#2bdf61);
+  background: linear-gradient(90deg,#3487b8,#5fb464);
   background-size: 200%;
   border-radius: 200px;
   animation: animate 4s alternate infinite;
@@ -80,6 +84,10 @@ a{
 
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 a:before{
   content: '';
   position: absolute;
@@ -88,12 +96,8 @@ a:before{
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(90deg,#03a9f4,#41f45f);
+  background: linear-gradient(90deg,#3487b8,#5fb464);
   background-size: 400%;
   border-radius: 200px;
   filter: blur(2px);
-}
-
-.loading {
-
 }
