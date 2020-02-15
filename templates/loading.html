@@ -4,15 +4,13 @@
 
 
 <!-- maybe change back to scripts.js-->
-<script script src="../googleAPI/try.js"></script>
-<!-- maybe change back to scripts.js-->
-<script script src="script.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 
 <html>
 
 <head>
     <title>This is the title of the webpage!</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='index.css')}}">
 </head>
 
 <head>
