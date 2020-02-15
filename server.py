@@ -19,12 +19,20 @@ def push_results():
 
 @app.route('/push', methods=['POST'])
 def handle_push():
+    #Parse data
     try:
         data = json.loads(request.data);
         row = (data['twitter'], data['instagram'], data['facebook']);
         print(row)
     except (ValueError, KeyError, TypeError):
         return SomeErrorResponse
+
+    #----------------Whoever should deal with data, do it here-----------------#
+
+    #----------------Whoever should deal with data, do it here-----------------#
+
+    # Update page
+
     return jsonify({"status": "ok"}), 200;
 
 if __name__ == '__main__':
