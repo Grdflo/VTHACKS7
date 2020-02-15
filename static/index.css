@@ -53,7 +53,7 @@ input[type=text] {
       font-size: 34px;
       text-transform: uppercase;
       text-decoration: none;
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       box-sizing: border-box;
       background: linear-gradient(90deg,#4aa5cf,#2bdf61);
       background-size: 200%;
