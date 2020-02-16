@@ -53,6 +53,7 @@ def push_loading():
     global cords;
     cords = latLong(location)
 
+    push_attractions():
 
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
@@ -60,7 +61,6 @@ def push_loading():
 @app.route('/pushRestaurants/', methods=['POST'])
 def push_restaurants():
     global restaurants
-
     restaurants = nearPlace(cords[0], cords[1], 'food')
     return jsonify({"status": "ok"}), 200
 

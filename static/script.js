@@ -21,6 +21,7 @@ function initMap() {
     }
 
   });
+  displayData()
 }
 
 function sendData() {
