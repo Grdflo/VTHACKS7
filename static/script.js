@@ -52,15 +52,35 @@ function displayData() {
         console.log(cords);
         // TODO: shove google api here and use cords.cords
 
-        var uluru = {lat : cords.X, lng : cords.Y};
+        var bothCoords = {lat : cords.X, lng : cords.Y};
         var zoomAmount = 5;
 
         var map = new google.maps.Map(document.getElementById('map'),
-                                      {center : uluru, zoom : zoomAmount});
+                                      {center : bothCoords, zoom : zoomAmount});
 
-        var marker = new google.maps.Marker({position : uluru, map : map});
+        var marker = new google.maps.Marker({position : bothCoords, map : map});
       }
     }
 
+  });
+}
+
+function updateImages() {
+  $.ajax({
+    type : "POST",
+    dataType : "json",
+    contentType : "application/json",
+    url : "/curLoc",
+    statusCode : {
+      200 : function(locs) {
+        console.log("Sucessfully asked for data");
+        var image1 = document.createElement('image1');
+        var image2 = document.createElement('image2');
+        var image3 = document.createElement('image3');
+        image1.src = 'link/to/folder/before/folder' + toString(locs.location) + 'image1';
+        image2.src = 'link/to/folder/before/folder' + toString(locs.location) + 'image2';
+        image3.src = 'link/to/folder/before/folder' + toString(locs.location) + 'image3';
+      }
+    }
   });
 }
