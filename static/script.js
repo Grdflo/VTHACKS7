@@ -105,7 +105,7 @@ function updateImages() {
         image1.id = 'image1id';
         image2.id = 'image2id';
         image3.id = 'image3id';
-        
+
         document.getElementById("image1id").src = url1;
         document.getElementById("image2id").src = url2;
         document.getElementById("image3id").src = url3;
@@ -122,6 +122,7 @@ function updateImages() {
         document.getElementById('image3id').style.height = "100%";
         document.getElementById('image3id').style.objectFit = "cover";
 
+        // document.getElementById('image1id').style.borderRadius = '7px 7px 7px 7px';
       }
     }
   });
