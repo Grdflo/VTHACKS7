@@ -88,10 +88,10 @@ def nearPlace(lat, long, key):
                                   radius = 10)
 
     print(near)
+    print('')
     return near
 
 l = latLong('Fairfax City')
 places = nearPlace(l[0],l[1], 'resturant')
-print(type(places))
-print(type(places.get('html_attributions')))
+
 #type(places[0][0])
