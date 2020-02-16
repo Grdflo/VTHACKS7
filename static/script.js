@@ -124,6 +124,9 @@ function updateImages() {
         document.getElementById('image3id').style.width = "100%";
         document.getElementById('image3id').style.height = "100%";
         document.getElementById('image3id').style.objectFit = "cover";
+
+        // document.getElementById('image1id').style.borderRadius = '7px 7px 7px
+        // 7px';
       }
     }
   });
