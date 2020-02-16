@@ -2,15 +2,15 @@
 import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
-from scrapeInfo.scraper import getSocialMediaText
-from googleAPI.learn import locationRecommend, latLong
+from scraper import getSocialMediaText
+from learn import locationRecommend, latLong
 
 #parseInputs
-pIs = []
 cordX = 0
 cordY = 0
 cords = []
 location = ''
+website = {'facebook': '' ,'instagram': '', 'twitter': ''}
 
 
 
@@ -41,18 +41,15 @@ def getLocations():
 @app.route('/pushLoading/', methods=['POST'])
 def push_loading():
     global location
+    global website
     #TODO: return only when done loading help
-    #PROCESS DATA HERE:--------------------------
-    pIs[0][1]
-
-    website = {pIs[0][0]:pIs[0][1],pIs[2][0]:pIs[2][1],pIs[1][0]:pIs[1][1]}
-    bigPost =  getSocialMediaText(website)#put in websites as  a dictionary to handle
+    #PROCESS DATA HERE:-------------------------
+    bigPost =  getSocialMediaText(website) #put in websites as a dictionary to handle
     location = locationRecommend(bigPost)
-    print(pIs);
-
 
     #Update the coordiantes here
     global cords;
+    cords = latLong(location)
 
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
@@ -63,16 +60,15 @@ def handle_push():
     try:
         #Try parsing data
         data = json.loads(request.data);
-        row = (data['twitter'], data['instagram'], data['facebook']);
-
-        #TODO: remove print
-        print(row)
+        website['twitter'] = data['twitter']
+        website['instagram'] = data['instagram']
+        website['facebook'] = data['facebook']
     except (ValueError, KeyError, TypeError) as e:
         return e
 
     #TODO
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
-    pIs.append(row);
+ 
 
     #----------------Whoever should deal cache(Google postgresql), do it here-----------------#
 
