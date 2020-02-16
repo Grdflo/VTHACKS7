@@ -53,7 +53,7 @@ def push_loading():
     global cords;
     cords = latLong(location)
 
-    push_attractions():
+    push_attractions()
 
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
