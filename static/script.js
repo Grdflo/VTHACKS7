@@ -52,13 +52,13 @@ function displayData() {
         console.log(cords);
         // TODO: shove google api here and use cords.cords
 
-        var uluru = {lat : cords.X, lng : cords.Y};
+        var bothCoords = {lat : cords.X, lng : cords.Y};
         var zoomAmount = 5;
 
         var map = new google.maps.Map(document.getElementById('map'),
-                                      {center : uluru, zoom : zoomAmount});
+                                      {center : bothCoords, zoom : zoomAmount});
 
-        var marker = new google.maps.Marker({position : uluru, map : map});
+        var marker = new google.maps.Marker({position : bothCoords, map : map});
       }
     }
 
