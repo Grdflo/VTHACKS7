@@ -86,7 +86,7 @@ def handle_push():
     #Parse data
     try:
         #Try parsing data
-        data = json.loads(request.data);
+        data = json.loads(request.data)
         website['twitter'] = data['twitter']
         website['instagram'] = data['instagram']
         website['facebook'] = data['facebook']
