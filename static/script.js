@@ -15,7 +15,12 @@ function sendData() {
     url : "/pushMain/",
 
     // Calls once data recieved
-    statusCode : {200 : function() { console.log("Sucessfully pushed data"); }}
+    statusCode : {
+      200 : function() {
+        console.log("Sucessfully pushed data");
+        window.location.pathname = '/loading'
+      }
+    }
   });
 }
 
@@ -77,9 +82,6 @@ function displayData() {
         console.log(restaurants);
         // TODO: shove google api here and use restaurants
         var eat = {rest : restaurants.rest};
-
-        
-        
       }
     }
 
@@ -100,9 +102,15 @@ function updateImages() {
         var image2 = document.createElement('image2');
         var image3 = document.createElement('image3');
         // toString(locs.location)
-        image1.src = '/googleAPI/' + 'Amsterdam' + '/image1.jpg';
-        image2.src = '/googleAPI/' + 'Amsterdam' + '/image2.jpg';
-        image3.src = '/googleAPI/' + 'Amsterdam' + '/image3.jpg';
+        image1.src = '/googleAPI/' +
+                     'Amsterdam' +
+                     '/image1.jpg';
+        image2.src = '/googleAPI/' +
+                     'Amsterdam' +
+                     '/image2.jpg';
+        image3.src = '/googleAPI/' +
+                     'Amsterdam' +
+                     '/image3.jpg';
         image1.id = 'image1id';
         image2.id = 'image2id';
         image3.id = 'image3id';
@@ -112,7 +120,8 @@ function updateImages() {
 
         document.getElementById('image1id').style.width = "100%";
         document.getElementById('image1id').style.height = "100%";
-        // document.getElementById("image1").src = '/googleAPI/' + 'Amsterdam' + '/image1.jpg';
+        // document.getElementById("image1").src = '/googleAPI/' + 'Amsterdam' +
+        // '/image1.jpg';
       }
     }
   });
