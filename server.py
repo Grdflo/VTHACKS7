@@ -43,8 +43,8 @@ def push_loading():
     #Update the coordiantes here
     global cords;
     cords = [];
-    cords.append(1);
-    cords.append(2);
+    cords.append(-10);
+    cords.append(10);
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
 

@@ -4,6 +4,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='initMap.js') }}"></script>
 <link rel="stylesheet" media="all" href="{{ url_for('static', filename='results.css')}}">
+<link rel="stylesheet" media="all" href="{{ url_for('static', filename='index.css')}}">
 
 <html>
 
@@ -13,16 +14,18 @@
 
 <body onload="displayData()">
 
-    <div class="left"> hello
+    <div class="left">
         <div class="spacer"></div>
         <div id="map"></div>
     </div>
+
     <div class="imageBox right">
         <div class="image1"></div>
         <div class="image2"></div>
         <div class="image3"></div>
     </div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJxtj9236MbEc16B_D8zDpSIBxXAhmR54&callback=initMap">
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJxtj9236MbEc16B_D8zDpSIBxXAhmR54&callback=displayData">
     </script>
 </body>
 
