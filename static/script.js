@@ -73,7 +73,7 @@ function displayData() {
             else{
                 var lat = att[i];
                 var long = att[i+1];
-                
+
             }
             
           }
@@ -85,7 +85,7 @@ function displayData() {
 }
 
 function updateImages() {
-  displayData();
+  
   $.ajax({
     type : "POST",
     dataType : "json",
