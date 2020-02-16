@@ -24,7 +24,7 @@ def locationRecommend(post):
         with open(text, 'r') as myfile:
             #array of all lines in an array
             lines = myfile.readlines()
-        
+
         for line in lines:
             #regex to strip a string of punctuation
             if (line == '\n'):
@@ -62,12 +62,12 @@ def locationRecommend(post):
     #for k, v in zip(predict, res):
     #    print(k, '=>', v)
 
-    
+
     predict = [post]
     predict_vec = vec.transform(predict)
     res = clf.predict(predict_vec)
     print(predict[0], '=>', res[0])
-    
+
     print (predict_vec)
     return (res[0])
 
@@ -82,10 +82,13 @@ def latLong(place):
     return [latitude, longitude]
 
 def nearPlace(lat, long, key):
-    
+
     near = gmaps.places_nearby([lat, long],keyword=key,
                                   language = 'en-AU',
                                   radius = 10)
+    for i in range(3):
+	if (len(near.get('results')) > 3):
+	    nameRating = [near.get('results')[i].get('name'), near.get('results')[i].get('rating'), near.get('results')[i].get('geometry').get("lat"),near.get('results')[i].get('geometry').get("lng")]
 
     print(near)
     print('')
