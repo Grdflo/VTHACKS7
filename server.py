@@ -31,13 +31,13 @@ def push_results():
 
 @app.route('/curCords', methods=['POST'])
 def getCoords():
-    global cords;
-    return {"X" : cords[0], "Y" : cords[1]}, 200;
+    global cords
+    return {"X" : cords[0], "Y" : cords[1]}, 200
 
 @app.route('/curLoc', methods=['POST'])
 def getLocations():
-    global location;
-    return {"location": location};
+    global location
+    return {"location": location}
     
 
 @app.route('/pushLoading/', methods=['POST'])
@@ -50,10 +50,10 @@ def push_loading():
     location = locationRecommend(bigPost)
 
     #Update the coordiantes here
-    global cords;
+    global cords
     cords = latLong(location)
 
-    push_attractions():
+    push_attractions()
 
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
