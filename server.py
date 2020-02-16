@@ -45,8 +45,7 @@ def push_loading():
 
     #Update the coordiantes here
     global cords;
-    cords  = latLong(location)
-    
+
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
 

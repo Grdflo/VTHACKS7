@@ -51,6 +51,14 @@ function displayData() {
         console.log("Sucessfully asked for data");
         console.log(cords);
         // TODO: shove google api here and use cords.cords
+
+        var bothCoords = {lat : cords.X, lng : cords.Y};
+        var zoomAmount = 5;
+
+        var map = new google.maps.Map(document.getElementById('map'),
+                                      {center : bothCoords, zoom : zoomAmount});
+
+        var marker = new google.maps.Marker({position : bothCoords, map : map});
       }
     }
 
