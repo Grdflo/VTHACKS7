@@ -89,25 +89,27 @@ def nearPlace(lat, long, key):
     arr = []
     for i in range(0,3):
         if (len(near.get('results')) > i):
-            #nameRating = [near.get('results')[i].get('name')] 
-            #nameRating.append(near.get('results')[i].get('rating'))
-            #nameRating.append(near.get('results')[i].get('geometry').get('location').get("lat"))
-            #nameRating.append(near.get('results')[i].get('geometry').get('location').get("lng"))
-            #arr.append([nameRating])
-            stringLat = str(near.get('results')[i].get('geometry').get('location').get("lat"))
-            strLong = str(near.get('results')[i].get('geometry').get('location').get("lng")) 
-            list = (list,near.get('results')[i].get('name'),",", 
-            near.get('results')[i].get('rating'),",", 
-            stringLat,",",strLong,'\n')
+            nameRating = [near.get('results')[i].get('name')] 
+            nameRating.append(near.get('results')[i].get('rating'))
+            nameRating.append(near.get('results')[i].get('geometry').get('location').get("lat"))
+            nameRating.append(near.get('results')[i].get('geometry').get('location').get("lng"))
+            arr.append([nameRating])
+
+
+            #stringLat = str(near.get('results')[i].get('geometry').get('location').get("lat"))
+            #strLong = str(near.get('results')[i].get('geometry').get('location').get("lng")) 
+
+
+            #list = list,near.get('results')[i].get('name'),near.get('results')[i].get('rating'),stringLat,strLong,'\n'
             
         
     
     #print(near)
     print('')
-    return list
+    return arr
 
 l = latLong('Fairfax City')
 places = nearPlace(l[0],l[1], 'attractions')
-#print (places)
+print (places)
 # locationRecommend("rework")
 #type(places[0][0])
