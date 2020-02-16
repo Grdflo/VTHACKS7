@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- Imports  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<link rel="stylesheet" media="all" href="{{ url_for('static', filename='index.css')}}">
+
+<html>
+
+    <head>
+        <title>Loading ( ͡° ͜ʖ ͡°) </title>
+    </head>
+
+    <body onload="requestData()">
+        <div class="loading">loading results...</div>
+
+    </body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Oxygen|Poppins&display=swap');
+
+        @keyframes animate
+        {
+        0%
+        {
+            background-position: 0%;
+        }
+
+        100%
+        {
+            background-position: 100%;
+        }
+
+        }
+        .loading {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            text-decoration: none;
+            /*
+            transform: translate (-50%, -50%);
+            */
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            color: #fff;
+            font-size: 34px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            background: linear-gradient(90deg,#60b6e7,#89e28f);
+            background-size: 200%;
+            border-radius: 200px;
+            animation: animate 3s alternate infinite;
+        }
+
+    </style>
+</html>

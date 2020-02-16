@@ -16,13 +16,13 @@ from imageClassify import getAssociations
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="scrapeInfo\\image-classification-json.json"
 
 
-driver = webdriver.Chrome("C:\\Program Files (x86)\\webdrivers\\chromedriver.exe")
+driver = webdriver.Chrome("chromedriver")
 
 facebookText = []
 twitterText = []
 
 # webscrapers
-# text classes in facebook: 
+# text classes in facebook:
 def searchFacebook(facebookHandle):
 	searchURL = 'https://www.facebook.com/' + facebookHandle + '/posts/?ref=page_internal'
 	try:  # make sure social media account is public
@@ -67,7 +67,7 @@ def searchInstagram(instagramHandle):
 			# print(f'local link: {str(imageName) + ".jpg"}')
 			urllib.request.urlretrieve(str(src), "instagramImages\\" + str(imageName) + ".jpg")
 			localImageLinks.append('scrapeInfo\\instagramImages\\' + str(imageName) + ".jpg")
-		except: 
+		except:
 			print("Instagram not allowing src retrieval for some reason or page not public")
 		imageName = imageName.strip(str(i))
 	# print(localImageLinks)
