@@ -15,7 +15,12 @@ function sendData() {
     url : "/pushMain/",
 
     // Calls once data recieved
-    statusCode : {200 : function() { console.log("Sucessfully pushed data"); }}
+    statusCode : {
+      200 : function() {
+        console.log("Sucessfully pushed data");
+        location.href = "localhost:8081/loading";
+      }
+    }
   });
 }
 
