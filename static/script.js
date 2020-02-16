@@ -70,15 +70,29 @@ function displayData() {
     type : "POST",
     dataType : "json",
     contentType : "application/json",
-    url : "/curRestaurants",
+    url : "/curAttractions",
     statusCode : {
-      200 : function(restaurants) {
+      200 : function(attractions) {
         console.log("Sucessfully asked for data");
-        console.log(restaurants);
+        console.log(attractions);
         // TODO: shove google api here and use restaurants
-        var eat = {rest : restaurants.rest};
-
-        
+        var eat = {attract : attractions.att};
+        var all = eat.attract;
+        var indivPlace = all.split("\n");
+        indivPlace.forEach(element => function(element){
+          var att = element.split(",")
+          for(var i = 0; i  < att.length/2;i++)
+          {
+            var p = document.createElement("P");  
+            if (i == 0)
+            {
+              var textnode = document.createTextNode(att[i] + "   " + att[i+1]); 
+              p.appendChild(textnode);
+              document.getElementById('locations').appendChild(p)
+            }
+            
+          }
+        })
         
       }
     }
