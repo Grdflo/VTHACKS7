@@ -54,7 +54,7 @@ def push_loading():
     global cords
     cords = latLong(location)
     
-    push_attractions()
+    attractions = nearPlace(cords[0], cords[1], 'tourism')
 
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
