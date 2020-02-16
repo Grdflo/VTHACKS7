@@ -46,6 +46,7 @@ function requestData() {
 }
 
 function displayData() {
+  console.log("went here")
   $.ajax({
     type : "GET",
     dataType : "json",
@@ -84,7 +85,8 @@ function displayData() {
 }
 
 function updateImages() {
-  
+  displayData();
+  console.log("displayed data")
   $.ajax({
     type : "POST",
     dataType : "json",
