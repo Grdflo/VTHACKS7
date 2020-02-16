@@ -22,7 +22,7 @@
                 <div id="yourLocationIs"></div>
                 <div id="map"></div>
                 <div class="horizontalContainer"> 
-                    <div id="locations" class="interestingData">
+                    <div id="locations" class="interestingData extraMargin">
                         <div class="topText">Popular Attractions</div>
                     </div>
                     <div id="planeTickets" class="interestingData">Plane Tickets<div id="serachBox" style="width: 27%; padding: 1em; position: absolute"><script async src="https://cse.google.com/cse.js?cx=008549958386327149831:4ewsuczabj5"></script>
@@ -43,7 +43,7 @@
     </body>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=Oxygen|Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Oxygen:700&display=swap');
 
         /* cookie cutter class for attractions */
         .attraction {
@@ -70,7 +70,7 @@
         body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(60deg, #5e3aff, rgb(210, 53, 241));
+        background: linear-gradient(60deg, #6b49ff, rgb(218, 103, 241));
         background-size:300%;
         /* background-color: rgb(96, 110, 235); */
         }
@@ -87,7 +87,7 @@
 
         .horizontalContainer {
             width: 95%;
-            height: 600px;
+            height: 2000px;
             margin: 30px;
             margin-top: 0px;
             /* background-color: orangered; */
@@ -102,13 +102,16 @@
             width: 45%;
             height: 98%;
             margin-left: 2%;
-            margin-right: 2.5%;
-            margin-top: 2%;
+            margin-right: 2%;
             text-align: center;
             box-shadow: 0px 10px 10px 0px #1b1b1b;
-            border-radius: 15px 0px 15px 0px;
+            border-radius: 8px 0px 8px 0px;
             font-family: 'Oxygen', sans-serif;
             font-size: 20px;
+        }
+
+        .extraMargin {
+            margin-top:4%;
         }
 
         #locations {
