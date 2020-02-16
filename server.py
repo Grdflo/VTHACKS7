@@ -2,6 +2,8 @@
 import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
+from scrapeInfo.scraper import getSocialMediaText
+from googleAPI.learn import locationRecommend, latLong
 
 #parseInputs
 pIs = []
@@ -40,18 +42,17 @@ def getLocations():
 def push_loading():
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
-    #pIs[0][1]
+    pIs[0][1]
 
+    website = {pIs[0][0]:pIs[0][1],pIs[2][0]:pIs[2][1],pIs[1][0]:pIs[1][1]}
+    bigPost =  getSocialMediaText(website)#put in websites as  a dictionary to handle
+    location = locationRecommend(bigPost)
     print(pIs);
-
-
 
 
     #Update the coordiantes here
     global cords;
-    cords = [];
-    cords.append(-10);
-    cords.append(10);
+
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
 
