@@ -6,6 +6,7 @@ import string
 import re
 import googlemaps
 from datetime import datetime
+import random
 
 gmaps = googlemaps.Client(key='AIzaSyDJxtj9236MbEc16B_D8zDpSIBxXAhmR54')
 
@@ -68,7 +69,7 @@ def locationRecommend(post):
     print(predict[0], '=>', res[0])
     
     print (predict_vec)
-    return (res[0])
+    return (random.choice(location))
 
 def latLong(place):
     #given a place - find the location(lat and long) and place_id
