@@ -4,10 +4,10 @@ from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
 
 #parseInputs
-pIs = [];
-cordX = 0;
-cordY = 0;
-cords = [];
+pIs = []
+cordX = 0
+cordY = 0
+cords = []
 
 
 
