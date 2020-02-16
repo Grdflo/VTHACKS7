@@ -93,5 +93,5 @@ def nearPlace(lat, long, key):
 
 l = latLong('Fairfax City')
 places = nearPlace(l[0],l[1], 'resturant')
-
+print(places.get('results')[3].get('name'))
 #type(places[0][0])
