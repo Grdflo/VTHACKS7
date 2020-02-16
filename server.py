@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import json
+xport json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
 from scrapeInfo.scraper import getSocialMediaText
@@ -40,6 +40,7 @@ def getLocations():
 
 @app.route('/pushLoading/', methods=['POST'])
 def push_loading():
+    global location
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
     pIs[0][1]
