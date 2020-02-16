@@ -8,6 +8,7 @@ pIs = []
 cordX = 0
 cordY = 0
 cords = []
+location = ''
 
 
 
@@ -28,6 +29,12 @@ def push_results():
 def getCoords():
     global cords;
     return {"X" : cords[0], "Y" : cords[1]}, 200;
+
+@app.route('/curLoc', methods=['POST'])
+def getLocations():
+    global location;
+    return {"location": location};
+    
 
 @app.route('/pushLoading/', methods=['POST'])
 def push_loading():
