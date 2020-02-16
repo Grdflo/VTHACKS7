@@ -6,6 +6,7 @@ body{
     padding: 0;
     background: rgb(83, 83, 83);
 }
+
 /* 
 input[type=text] {
   background-color: rgb(129, 93, 93);
@@ -27,6 +28,7 @@ input[type=text] {
 h1{
   left:100px;
 }
+
 .container{
   text-align:center;
   margin-top: 120px;
