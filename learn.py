@@ -77,7 +77,7 @@ def latLong(place):
                                     location_bias='point:10,10', language = 'en-AU')
     latitude  = map_result.get('candidates')[0].get('geometry').get('location').get('lat')
     longitude  = map_result.get('candidates')[0].get('geometry').get('location').get('lng')
-    print (latitude, longitude);
+    print (latitude, longitude)
     return [latitude, longitude]
 
 def nearPlace(lat, long, key):
