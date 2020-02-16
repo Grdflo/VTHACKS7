@@ -67,7 +67,7 @@ def push_restaurants():
 def push_attractions():
     global attractions
 
-    attractions = nearPlace(cords[0], cords[1], 'tourism')
+    #attractions = nearPlace(cords[0], cords[1], 'tourism')
     return jsonify({"status": "ok"}), 200
 
 @app.route('/curRestaurants', methods=['POST'])
