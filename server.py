@@ -6,8 +6,6 @@ from scraper import getSocialMediaText
 from learn import locationRecommend, latLong, nearPlace
 
 #parseInputs
-cordX = 0
-cordY = 0
 cords = []
 location = ''
 website = {'facebook': '' ,'instagram': '', 'twitter': ''}
@@ -81,7 +79,7 @@ def getRestuarants():
 def getAttractions():
     global attractions
     print(attractions)
-    return {"attractions", attractions}
+    return {"attractions", attractions}, 200
 
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():
