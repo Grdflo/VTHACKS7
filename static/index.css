@@ -5,8 +5,6 @@ body{
   margin: 0;
   padding: 0;
   background: rgb(83, 83, 83);
-  background-color: rgb(129, 93, 93);
-  color: rgb(231, 65, 65);
 } 
 
 .header
@@ -19,8 +17,8 @@ body{
   left: 1%;
   color: rgb(255, 255, 255);
   font-family: 'Poppins', sans-serif;
-
 }
+
 h1{
   left:100px;
 }
