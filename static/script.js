@@ -48,7 +48,7 @@ function displayData() {
     url : "/curAttractions",
     statusCode : {
       200 : function(attractions) {
-        console.log("Sucessfully asked for data");
+        console.log("Sucessfully asked for data (displayData)");
         console.log(attractions);
         // TODO: shove google api here and use restaurants
         var eat = {attract : attractions.att};
@@ -57,7 +57,7 @@ function displayData() {
         indivPlace.forEach(element => function(element) {
           var att = element.split(",")
           for (var i = 0; i < att.length / 2; i++) {
-            var p = document.createElement("P");
+            var p = document.createElement("p");
             if (i == 0) {
               var textnode =
                   document.createTextNode(att[i] + "   " + att[i + 1]);
@@ -100,15 +100,23 @@ function updateImages() {
         image1.id = 'image1id';
         image2.id = 'image2id';
         image3.id = 'image3id';
-
-        document.getElementById('image1id').style.width = "100%";
-        document.getElementById('image1id').style.height = "100%";
-
-        document.getElementById('image1id').style.backgroundColor = "red";
-
+        
         document.getElementById("image1id").src = url1;
         document.getElementById("image2id").src = url2;
         document.getElementById("image3id").src = url3;
+
+        document.getElementById('image1id').style.width = "100%";
+        document.getElementById('image1id').style.height = "100%";
+        document.getElementById('image1id').style.objectFit = "cover";
+        
+        document.getElementById('image2id').style.width = "100%";
+        document.getElementById('image2id').style.height = "100%";
+        document.getElementById('image2id').style.objectFit = "cover";
+        
+        document.getElementById('image3id').style.width = "100%";
+        document.getElementById('image3id').style.height = "100%";
+        document.getElementById('image3id').style.objectFit = "cover";
+
       }
     }
   });
