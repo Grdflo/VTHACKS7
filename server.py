@@ -53,7 +53,7 @@ def push_loading():
     #Update the coordiantes here
     global cords
     cords = latLong(location)
-    attractions = nearPlace(cords[0], cords[1], 'tourism')
+    
     push_attractions()
 
     #PROCESS DATA HERE:--------------------------
