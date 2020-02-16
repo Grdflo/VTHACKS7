@@ -92,13 +92,13 @@ function updateImages() {
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
         var url1 = '../' +
-                   'Amsterdam' +
+                   toString(locs.location) +
                    '/image1.jpg';
         var url2 = '../' +
-                   'Amsterdam' +
+                    toString(locs.location) +
                    '/image2.jpg';
         var url3 = '../' +
-                   'Amsterdam' +
+                    toString(locs.location) +
                    '/image3.jpg';
 
         document.getElementById('image1contain').appendChild(image1);
@@ -124,6 +124,9 @@ function updateImages() {
         document.getElementById('image3id').style.width = "100%";
         document.getElementById('image3id').style.height = "100%";
         document.getElementById('image3id').style.objectFit = "cover";
+
+        var destination = "Your optimal travel location: " + locs.location;
+        document.getElementById('yourLocationIs').innerHTML = destination;
 
         // document.getElementById('image1id').style.borderRadius = '7px 7px 7px
         // 7px';
