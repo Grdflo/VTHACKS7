@@ -91,13 +91,13 @@ function updateImages() {
         var image1 = document.createElement('img');
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
-        var url1 = '../' +
+        var url1 = '../Images/' +
                    toString(locs.location) +
                    '/image1.jpg';
-        var url2 = '../' +
+        var url2 = '../Images/' +
                     toString(locs.location) +
                    '/image2.jpg';
-        var url3 = '../' +
+        var url3 = '../Images/' +
                     toString(locs.location) +
                    '/image3.jpg';
 
@@ -125,11 +125,9 @@ function updateImages() {
         document.getElementById('image3id').style.height = "100%";
         document.getElementById('image3id').style.objectFit = "cover";
 
-        var destination = "Your optimal travel location: " + locs.location;
+        var destination = "Your optimal travel location: " + locs.location + "!";
         document.getElementById('yourLocationIs').innerHTML = destination;
-
-        // document.getElementById('image1id').style.borderRadius = '7px 7px 7px
-        // 7px';
+        console.log("HERE");  
       }
     }
   });

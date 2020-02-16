@@ -1361,3 +1361,18 @@
 [0216/050650.308:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0216/050650.308:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0216/050650.308:ERROR:exception_snapshot_win.cc(98)] thread ID 32304 not found in process
+[0216/051505.271:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.272:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0216/051505.273:ERROR:exception_snapshot_win.cc(98)] thread ID 1768 not found in process
+[0216/051505.282:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.283:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.283:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.283:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.283:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0216/051505.284:ERROR:exception_snapshot_win.cc(98)] thread ID 14248 not found in process
+[0216/051505.317:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.317:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0216/051505.317:ERROR:exception_snapshot_win.cc(98)] thread ID 21176 not found in process
+[0216/051505.325:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0216/051505.325:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0216/051505.325:ERROR:exception_snapshot_win.cc(98)] thread ID 3320 not found in process
