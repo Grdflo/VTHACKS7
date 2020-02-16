@@ -2,16 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen|Poppins&display=swap');
 
 body{
-    margin: 0;
-    padding: 0;
-    background: rgb(83, 83, 83);
-}
-
-/* 
-input[type=text] {
+  margin: 0;
+  padding: 0;
+  background: rgb(83, 83, 83);
   background-color: rgb(129, 93, 93);
   color: rgb(231, 65, 65);
-} */
+} 
 
 .header
 {
