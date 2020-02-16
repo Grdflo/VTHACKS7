@@ -3,7 +3,7 @@ import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
 from scraper import getSocialMediaText
-from learn import locationRecommend, latLong
+from learn import locationRecommend, latLong, nearPlace
 
 #parseInputs
 cordX = 0
