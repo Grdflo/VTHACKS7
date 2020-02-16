@@ -80,7 +80,7 @@ def getRestuarants():
 def getAttractions():
     global attractions
     print(attractions)
-    return {"att", attractions}
+    return {"attractions", attractions}
 
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():

@@ -102,12 +102,12 @@ def nearPlace(lat, long, key):
             
         
     
-    print(near)
+    #print(near)
     print('')
     return list
 
 l = latLong('Fairfax City')
 places = nearPlace(l[0],l[1], 'attractions')
-print (places)
+#print (places)
 # locationRecommend("rework")
 #type(places[0][0])

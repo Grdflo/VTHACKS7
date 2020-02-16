@@ -52,23 +52,30 @@ function displayData() {
     contentType : "application/json",
     url : "/curAttractions",
     statusCode : {
-      200 : function(attractions) {
+      200 : function(att) {
         console.log("Sucessfully asked for data (attractions)");
-        console.log(attractions);
+        console.log(att);
         // TODO: shove google api here and use restaurants
-        var eat = {attract : attractions.att};
-        var all = eat.attract;
+        var eat = {att : att.attractions};
+        var all = eat.att;
         var indivPlace = all.split("\n");
         indivPlace.forEach(element => function(element) {
           var att = element.split(",")
           for (var i = 0; i < att.length / 2; i++) {
             var p = document.createElement("p");
+            p.className += 'attraction';
             if (i == 0) {
               var textnode =
                   document.createTextNode(att[i] + "   " + att[i + 1]);
               p.appendChild(textnode);
               document.getElementById('locations').appendChild(p)
             }
+            else{
+                var lat = att[i];
+                var long = att[i+1];
+                
+            }
+            
           }
         })
       }
