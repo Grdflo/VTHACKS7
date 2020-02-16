@@ -56,8 +56,7 @@ function displayData() {
         console.log("Sucessfully asked for data (attractions)");
         console.log(att);
         // TODO: shove google api here and use restaurants
-        var eat = {att : att.attractions};
-        var all = eat.att;
+        var all = att.attractions;
         var indivPlace = all.split("\n");
         indivPlace.forEach(element => function(element) {
           var att = element.split(",")

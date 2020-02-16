@@ -22,7 +22,9 @@
                 <div id="yourLocationIs"></div>
                 <div id="map"></div>
                 <div class="horizontalContainer"> 
-                    <div id="locations" class="interestingData">Attractions</div>
+                    <div id="locations" class="interestingData">
+                        <div class="topText">Popular Attractions</div>
+                    </div>
                     <div id="planeTickets" class="interestingData">Plane Tickets<div id="serachBox" style="width: 27%; padding: 1em; position: absolute"><script async src="https://cse.google.com/cse.js?cx=008549958386327149831:4ewsuczabj5"></script>
                         <div class="gcse-search"></div></div></div>
                 </div>
@@ -43,6 +45,16 @@
         @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Oxygen|Poppins&display=swap');
 
+        /* cookie cutter class for attractions */
+        .attraction {
+            width:90%;
+            margin:4%;
+            height: 70px;
+            font-family: 'Oxygen', sans-serif;
+            font-size: 20px;
+            /* background-color: red; */
+        }
+
         #yourLocationIs {
             height: 20px;
             width: 100%;
@@ -58,7 +70,9 @@
         body {
         margin: 0;
         padding: 0;
-        background-color: rgb(83, 83, 83);
+        background: linear-gradient(60deg, #5e3aff, rgb(210, 53, 241));
+        background-size:300%;
+        /* background-color: rgb(96, 110, 235); */
         }
 
         #map {
@@ -79,6 +93,10 @@
             /* background-color: orangered; */
         }
 
+        .topText {
+            margin:10px;
+        }
+
         .interestingData {
             display: inline-block;
             width: 45%;
@@ -94,11 +112,11 @@
         }
 
         #locations {
-            background-color: rgb(217, 255, 217);
+            background-color: rgb(233, 233, 233);
         }
         
         #planeTickets {
-            background-color: rgb(155, 218, 255);
+            background-color: rgb(230, 230, 230);
         }
         
         .container {
