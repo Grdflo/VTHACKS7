@@ -47,7 +47,7 @@ function requestData() {
 
 function displayData() {
   $.ajax({
-    type : "POST",
+    type : "GET",
     dataType : "json",
     contentType : "application/json",
     url : "/curAttractions",
@@ -58,7 +58,7 @@ function displayData() {
         // TODO: shove google api here and use restaurant
         var all = att.attractions;
         var indivPlace = all.split("\n");
-        indivPlace.forEach(element => function(element) {
+        indivPlace.forEach( element => function(element) {
           var att = element.split(",")
           for (var i = 0; i < att.length / 2; i++) {
             var p = document.createElement("p");
