@@ -53,7 +53,7 @@ function displayData() {
     url : "/curAttractions",
     statusCode : {
       200 : function(attractions) {
-        console.log("Sucessfully asked for data (displayData)");
+        console.log("Sucessfully asked for data (attractions)");
         console.log(attractions);
         // TODO: shove google api here and use restaurants
         var eat = {attract : attractions.att};
