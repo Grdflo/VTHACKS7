@@ -92,14 +92,16 @@ function updateImages() {
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
         var url1 = '../Images/' +
-                   toString(locs.location) +
+                   locs.location +
                    '/image1.jpg';
         var url2 = '../Images/' +
-                    toString(locs.location) +
+                    locs.location +
                    '/image2.jpg';
         var url3 = '../Images/' +
-                    toString(locs.location) +
+                    locs.location +
                    '/image3.jpg';
+        console.log(locs['location'])
+        console.log("THIS")
 
         document.getElementById('image1contain').appendChild(image1);
         document.getElementById('image2contain').appendChild(image2);
