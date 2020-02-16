@@ -47,37 +47,55 @@ function requestData() {
 
 function displayData() {
   console.log("went here")
+
+  //ERROR HERE
   $.ajax({
-    type : "GET",
+    type : "POST",
     dataType : "json",
     contentType : "application/json",
-    url : "/curAttractions",
+    url : "/curA",
     statusCode : {
       200 : function(att) {
         console.log("Sucessfully asked for data (attractions)");
         console.log(att);
         // TODO: shove google api here and use restaurant
+
         var all = att.attractions;
         var indivPlace = all.split("\n");
-        indivPlace.forEach( element => function(element) {
-          var att = element.split(",")
-          for (var i = 0; i < att.length / 2; i++) {
+        
+        indivPlace = indivPlace.slice(0, 3)
+        console.log(indivPlace)
+        if(indivPlace[2] == "") {
+          indivPlace = indivPlace.slice(0, 2)
+        } else if (indivPlace[1] == "") {
+          indivPlace = indivPlace.slice(0, 1)
+        } else if (indivPlace[0] == ""){
+          indivPlace = indivPlace.slice(0, 0)
+        }
+        console.log(indivPlace)
+
+        indivPlace.forEach(function(element) {
+          var ele = element.split(",")
+          console.log(ele)
+      
+          for (var i = 0; i < ele.length / 2; i++) {
+            
             var p = document.createElement("p");
             p.className += 'attraction';
             if (i == 0) {
               var textnode =
-                  document.createTextNode(att[i] + "   " + att[i + 1]);
+                  document.createTextNode(ele[i] + "   " + ele[i + 1]);
               p.appendChild(textnode);
               document.getElementById('locations').appendChild(p)
             }
             else{
-                var lat = att[i];
-                var long = att[i+1];
+                var lat = ele[i];
+                var long = [i+1];
 
             }
-            
           }
         })
+
       }
     }
 
@@ -85,7 +103,6 @@ function displayData() {
 }
 
 function updateImages() {
-  displayData();
   console.log("displayed data")
   $.ajax({
     type : "POST",
@@ -112,7 +129,6 @@ function updateImages() {
                    '/image3.jpg';
                    console.log(url3);
         console.log(locs['location'])
-        console.log("THIS")
 
         document.getElementById('image1contain').appendChild(image1);
         document.getElementById('image2contain').appendChild(image2);
@@ -140,7 +156,6 @@ function updateImages() {
 
         var destination = "Your optimal travel location: " + locs.location + "!";
         document.getElementById('yourLocationIs').innerHTML = destination;
-        console.log("HERE");  
       }
     }
   });

@@ -53,7 +53,9 @@ def push_loading():
     cords = latLong(location)
     
     attractions = nearPlace(cords[0], cords[1], 'tourism')
-
+    print("ATTRACTIONS TYPE\n\n\n\n")
+    print(type({'attractions':attractions}))
+    print(attractions)
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
 
@@ -73,13 +75,13 @@ def push_attractions():
 @app.route('/curRestaurants', methods=['POST'])
 def getRestuarants():
     global restaurants
-    return {"rest", restaurants}
+    return {"rest" : restaurants}, 200
 
-@app.route('/curAttractions', methods=['POST'])
+@app.route('/curA', methods=['POST'])
 def getAttractions():
     global attractions
-    print(attractions)
-    return {"attractions", attractions}, 200
+    #My little error >:C
+    return {"attractions" : attractions}, 200
 
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():
