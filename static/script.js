@@ -77,9 +77,12 @@ function updateImages() {
         var image1 = document.createElement('image1');
         var image2 = document.createElement('image2');
         var image3 = document.createElement('image3');
-        image1.src = 'link/to/folder/before/folder' + toString(locs.location) + 'image1';
-        image2.src = 'link/to/folder/before/folder' + toString(locs.location) + 'image2';
-        image3.src = 'link/to/folder/before/folder' + toString(locs.location) + 'image3';
+        image1.src = 'VTHACKS7/googleAPI/' + toString(locs.location) + '/image1';
+        image2.src = 'VTHACKS7/googleAPI/' + toString(locs.location) + '/image2';
+        image3.src = 'VTHACKS7/googleAPI/' + toString(locs.location) + '/image3';
+        document.getElementById('image1contain').appendChild(image1);
+        document.getElementById('image2contain').appendChild(image2);
+        document.getElementById('image3contain').appendChild(image3);
       }
     }
   });

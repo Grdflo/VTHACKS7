@@ -40,6 +40,7 @@ def getLocations():
 
 @app.route('/pushLoading/', methods=['POST'])
 def push_loading():
+    global location
     #TODO: return only when done loading help
     #PROCESS DATA HERE:--------------------------
     pIs[0][1]
