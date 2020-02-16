@@ -44,6 +44,7 @@ def getLocations():
 def push_loading():
     global location
     global website
+    global attractions
     #TODO: return only when done loading help
     #PROCESS DATA HERE:-------------------------
     bigPost =  getSocialMediaText(website) #put in websites as a dictionary to handle
@@ -52,7 +53,7 @@ def push_loading():
     #Update the coordiantes here
     global cords
     cords = latLong(location)
-
+    attractions = nearPlace(cords[0], cords[1], 'tourism')
     push_attractions()
 
     #PROCESS DATA HERE:--------------------------
