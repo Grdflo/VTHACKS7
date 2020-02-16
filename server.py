@@ -79,6 +79,7 @@ def getRestuarants():
 @app.route('/curAttractions', methods=['POST'])
 def getAttractions():
     global attractions
+    print(attractions)
     return {"att", attractions}
 
 @app.route('/pushMain/', methods=['POST'])
