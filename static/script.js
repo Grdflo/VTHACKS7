@@ -55,23 +55,23 @@ function displayData() {
       200 : function(att) {
         console.log("Sucessfully asked for data (attractions)");
         console.log(att);
-        // TODO: shove google api here and use restaurants
+        // TODO: shove google api here and use restaurant
         var all = att.attractions;
-        var indivPlace = all;//.split("\n");
+        var indivPlace = all.split("\n");
         indivPlace.forEach(element => function(element) {
-          //var att = element.split(",")
-          for (var i = 0; i < element.length / 2; i++) {
-            var p = document.createElement('P');
-            p.className += "attraction";
+          var att = element.split(",")
+          for (var i = 0; i < att.length / 2; i++) {
+            var p = document.createElement("p");
+            p.className += 'attraction';
             if (i == 0) {
               var textnode =
-                  document.createTextNode(element[i] + "   " + element[i + 1]);
+                  document.createTextNode(att[i] + "   " + att[i + 1]);
               p.appendChild(textnode);
               document.getElementById('locations').appendChild(p)
             }
             else{
-                var lat = element[i];
-                var long = element[i+1];
+                var lat = att[i];
+                var long = att[i+1];
 
             }
             
