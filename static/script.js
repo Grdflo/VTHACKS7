@@ -76,7 +76,9 @@ function displayData() {
         console.log("Sucessfully asked for data");
         console.log(restaurants);
         // TODO: shove google api here and use restaurants
+        var eat = {rest : restaurants.rest};
 
+        
         
       }
     }

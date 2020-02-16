@@ -74,12 +74,12 @@ def push_attractions():
 @app.route('/curRestaurants', methods=['POST'])
 def getRestuarants():
     global restaurants
-    return {"restaurants", restaurants}
+    return {"rest", restaurants}
 
 @app.route('/curAttractions', methods=['POST'])
-def getRestuarants():
-    global restaurants
-    return {"attractions", attractions}
+def getAttractions():
+    global attractions
+    return {"att", attractions}
 
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():
