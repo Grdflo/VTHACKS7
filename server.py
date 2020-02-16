@@ -6,10 +6,10 @@ from scrapeInfo.scraper import getSocialMediaText
 from googleAPI.learn import locationRecommend, latLong
 
 #parseInputs
-pIs = [];
-cordX = 0;
-cordY = 0;
-cords = [];
+pIs = []
+cordX = 0
+cordY = 0
+cords = []
 
 
 
