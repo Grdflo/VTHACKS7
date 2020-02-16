@@ -91,7 +91,7 @@ function updateImages() {
         var image1 = document.createElement('img');
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
-        var url1 = './Images/' +
+        var url1 = 'images/' +
                    locs.location +
                    '/image1.jpg';
         console.log(url1);
