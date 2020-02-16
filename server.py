@@ -11,6 +11,8 @@ cordY = 0
 cords = []
 location = ''
 website = {'facebook': '' ,'instagram': '', 'twitter': ''}
+restuarants = ''
+attractions = ''
 
 
 
@@ -51,8 +53,33 @@ def push_loading():
     global cords;
     cords = latLong(location)
 
+
     #PROCESS DATA HERE:--------------------------
     return jsonify({"status": "ok"}), 200
+
+@app.route('/pushRestaurants/', methods=['POST'])
+def push_restaurants():
+    global restaurants
+
+    restaurants = nearPlace(cords[0], cords[1], 'food')
+    return jsonify({"status": "ok"}), 200
+
+@app.route('/pushAttractions/', methods=['POST'])
+def push_attractions():
+    global attractions
+
+    attractions = nearPlace(cords[0], cords[1], 'tourism')
+    return jsonify({"status": "ok"}), 200
+
+@app.route('/curRestaurants', methods=['POST'])
+def getRestuarants():
+    global restaurants
+    return {"restaurants", restaurants}
+
+@app.route('/curAttractions', methods=['POST'])
+def getRestuarants():
+    global restaurants
+    return {"attractions", attractions}
 
 @app.route('/pushMain/', methods=['POST'])
 def handle_push():

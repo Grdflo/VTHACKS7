@@ -86,13 +86,16 @@ def nearPlace(lat, long, key):
     near = gmaps.places_nearby([lat, long],keyword=key,
                                   language = 'en-AU',
                                   radius = 30)
-    list = []
+    list = ""
     for i in range(3):
         if (len(near.get('results')) > 3):
-            nameRating = [near.get('results')[i].get('name'), near.get('results')[i].get('rating'), 
-            near.get('results')[i].get('geometry').get('location').get("lat"),near.get('results')[i]
-            .get('geometry').get('location').get("lng")]
-            list.append(nameRating)
+           # nameRating = [near.get('results')[i].get('name'), near.get('results')[i].get('rating'), 
+           # near.get('results')[i].get('geometry').get('location').get("lat"),near.get('results')[i]
+           # .get('geometry').get('location').get("lng")]
+           # list.append(nameRating)
+           list = (list + near.get('results')[i].get('name'), near.get('results')[i].get('rating'), 
+           near.get('results')[i].get('geometry').get('location').get("lat"),near.get('results')[i]
+           .get('geometry').get('location').get("lng") + '\n')
         
     
     print(near)

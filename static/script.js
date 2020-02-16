@@ -40,7 +40,7 @@ function requestData() {
   });
 }
 
-function displayData() {
+function initMap() {
   $.ajax({
     type : "POST",
     dataType : "json",
@@ -59,6 +59,25 @@ function displayData() {
                                       {center : bothCoords, zoom : zoomAmount});
 
         var marker = new google.maps.Marker({position : bothCoords, map : map});
+      }
+    }
+
+  });
+}
+
+function displayData() {
+  $.ajax({
+    type : "POST",
+    dataType : "json",
+    contentType : "application/json",
+    url : "/curRestaurants",
+    statusCode : {
+      200 : function(restaurants) {
+        console.log("Sucessfully asked for data");
+        console.log(restaurants);
+        // TODO: shove google api here and use restaurants
+
+        
       }
     }
 
