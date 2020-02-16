@@ -85,16 +85,20 @@ def nearPlace(lat, long, key):
 
     near = gmaps.places_nearby([lat, long],keyword=key,
                                   language = 'en-AU',
-                                  radius = 10)
+                                  radius = 30)
+    list = []
     for i in range(3):
-	if (len(near.get('results')) > 3):
-	    nameRating = [near.get('results')[i].get('name'), near.get('results')[i].get('rating'), near.get('results')[i].get('geometry').get("lat"),near.get('results')[i].get('geometry').get("lng")]
-
+	    if (len(near.get('results')) > 3):
+	        nameRating = [near.get('results')[i].get('name'), near.get('results')[i].get('rating'), 
+                near.get('results')[i].get('geometry').get("lat"),near.get('results')[i].get('geometry').get("lng")]
+        list.apphend([nameRating])
+        
+    print(list)
     print(near)
     print('')
-    return near
+    return list
 
 l = latLong('Fairfax City')
 places = nearPlace(l[0],l[1], 'resturant')
-print(places.get('results')[3].get('name'))
+#print(places.get('results')[3].get('name'))
 #type(places[0][0])
