@@ -1,5 +1,5 @@
 #!/usr/bin/python
-xport json
+import json
 from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__, static_url_path='', static_folder="static")
 from scrapeInfo.scraper import getSocialMediaText
