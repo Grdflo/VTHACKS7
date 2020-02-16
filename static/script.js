@@ -91,15 +91,15 @@ function updateImages() {
         var image1 = document.createElement('img');
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
-        var url1 = 'images/' +
+        var url1 = '../images/' +
                    locs.location +
                    '/image1.jpg';
         console.log(url1);
-        var url2 = './Images/' +
+        var url2 = '../images/' +
                     locs.location +
                    '/image2.jpg';
                    console.log(url2);
-        var url3 = './Images/' +
+        var url3 = '../images/' +
                     locs.location +
                    '/image3.jpg';
                    console.log(url3);
