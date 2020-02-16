@@ -23,6 +23,7 @@
     <!--===============================================================================================-->
 
     <script script src="script.js"></script>
+    <script script src="initMap.js"></script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
                         </span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <input class="input100" type="text" name="Instagram" placeholder="Instagram username" id="insta">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -66,9 +67,9 @@
 
 
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" href="loading" onclick="sendData()">
+                        <a href="loading" onclick="sendData()" class="login100-form-btn">
                             Find your destination
-                        </button>
+                        </a>
                     </div>
 
                     <div class="text-center p-t-12">
@@ -105,7 +106,7 @@
         })
     </script>
     <!--===============================================================================================-->
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
