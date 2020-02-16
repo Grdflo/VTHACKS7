@@ -40,7 +40,12 @@ function sendData() {
     url : "/pushMain/",
 
     // Calls once data recieved
-    statusCode : {200 : function() { console.log("Sucessfully pushed data"); }}
+    statusCode : {
+      200 : function() {
+        console.log("Sucessfully pushed data");
+        window.location.pathname = '/loading'
+      }
+    }
   });
 }
 
@@ -78,9 +83,6 @@ function displayData() {
         console.log(restaurants);
         // TODO: shove google api here and use restaurants
         var eat = {rest : restaurants.rest};
-
-        
-        
       }
     }
 
@@ -97,12 +99,14 @@ function updateImages() {
     statusCode : {
       200 : function(locs) {
         console.log("Sucessfully loaded images");
+
         var image1 = document.createElement('img');
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
         var url1 = 'Amsterdam' + '/image1.jpg';
         var url2 = 'Amsterdam' + '/image2.jpg';
         var url3 = 'Amsterdam' + '/image3.jpg';
+
         document.getElementById('image1contain').appendChild(image1);
         document.getElementById('image2contain').appendChild(image2);
         document.getElementById('image3contain').appendChild(image3);
@@ -115,12 +119,14 @@ function updateImages() {
 
         document.getElementById('image1id').style.width = "100%";
         document.getElementById('image1id').style.height = "100%";
+      
         document.getElementById('image1id').style.backgroundColor = "red";
 
         
         document.getElementById("image1id").src = url1;
         document.getElementById("image2id").src = url2;
         document.getElementById("image3id").src = url3;
+
       }
     }
   });
