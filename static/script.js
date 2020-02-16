@@ -91,20 +91,16 @@ function updateImages() {
         var image1 = document.createElement('img');
         var image2 = document.createElement('img');
         var image3 = document.createElement('img');
-        var url1 = 'Amsterdam' +
+        var url1 = '../' + 'Amsterdam' +
                    '/image1.jpg';
-        var url2 = 'Amsterdam' +
+        var url2 = '../' + 'Amsterdam' +
                    '/image2.jpg';
-        var url3 = 'Amsterdam' +
+        var url3 = '../' + 'Amsterdam' +
                    '/image3.jpg';
 
         document.getElementById('image1contain').appendChild(image1);
         document.getElementById('image2contain').appendChild(image2);
         document.getElementById('image3contain').appendChild(image3);
-        // document.getElementById("image1contain").style.backgroundImage =
-        // 'url(' + url1 + ')';
-        // document.getElementById("myDiv").style.backgroundImage =
-        // "url('img_tree.png')";
 
         image1.id = 'image1id';
         image2.id = 'image2id';
