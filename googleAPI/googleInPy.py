@@ -4,7 +4,6 @@ from datetime import datetime
 
 
 
-
 # Geocoding an address
 geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
 

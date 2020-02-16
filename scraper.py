@@ -13,7 +13,7 @@ from imageClassify import getAssociations
 # Driver function at bottom
 
 # Set API credentials from json
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:\\Users\\sesch\\Desktop\\GitHub\\VTHACKS7\\scrapeInfo\\image-classification-json.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="scrapeInfo\\image-classification-json.json"
 
 
 driver = webdriver.Chrome("C:\\Program Files (x86)\\webdrivers\\chromedriver.exe")
@@ -66,7 +66,7 @@ def searchInstagram(instagramHandle):
 			# print(f'src: {str(src)}')
 			# print(f'local link: {str(imageName) + ".jpg"}')
 			urllib.request.urlretrieve(str(src), "instagramImages\\" + str(imageName) + ".jpg")
-			localImageLinks.append('C:\\Users\\sesch\\Desktop\\GitHub\\VTHACKS7\\scrapeInfo\\instagramImages\\' + str(imageName) + ".jpg")
+			localImageLinks.append('scrapeInfo\\instagramImages\\' + str(imageName) + ".jpg")
 		except: 
 			print("Instagram not allowing src retrieval for some reason or page not public")
 		imageName = imageName.strip(str(i))

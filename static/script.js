@@ -48,12 +48,12 @@ function initMap() {
     url : "/curCords",
     statusCode : {
       200 : function(cords) {
-        console.log("Sucessfully asked for data");
+        console.log("Successfully displayed map with coords");
         console.log(cords);
         // TODO: shove google api here and use cords.cords
 
         var bothCoords = {lat : cords.X, lng : cords.Y};
-        var zoomAmount = 5;
+        var zoomAmount = 8;
 
         var map = new google.maps.Map(document.getElementById('map'),
                                       {center : bothCoords, zoom : zoomAmount});
@@ -85,6 +85,7 @@ function displayData() {
 }
 
 function updateImages() {
+  displayData();
   $.ajax({
     type : "POST",
     dataType : "json",
@@ -92,16 +93,24 @@ function updateImages() {
     url : "/curLoc",
     statusCode : {
       200 : function(locs) {
-        console.log("Sucessfully asked for data");
+        console.log("Sucessfully loaded images");
         var image1 = document.createElement('image1');
         var image2 = document.createElement('image2');
         var image3 = document.createElement('image3');
-        image1.src = 'VTHACKS7/googleAPI/' + toString(locs.location) + '/image1';
-        image2.src = 'VTHACKS7/googleAPI/' + toString(locs.location) + '/image2';
-        image3.src = 'VTHACKS7/googleAPI/' + toString(locs.location) + '/image3';
+        // toString(locs.location)
+        image1.src = '/googleAPI/' + 'Amsterdam' + '/image1.jpg';
+        image2.src = '/googleAPI/' + 'Amsterdam' + '/image2.jpg';
+        image3.src = '/googleAPI/' + 'Amsterdam' + '/image3.jpg';
+        image1.id = 'image1id';
+        image2.id = 'image2id';
+        image3.id = 'image3id';
         document.getElementById('image1contain').appendChild(image1);
         document.getElementById('image2contain').appendChild(image2);
         document.getElementById('image3contain').appendChild(image3);
+
+        document.getElementById('image1id').style.width = "100%";
+        document.getElementById('image1id').style.height = "100%";
+        // document.getElementById("image1").src = '/googleAPI/' + 'Amsterdam' + '/image1.jpg';
       }
     }
   });

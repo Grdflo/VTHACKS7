@@ -58,17 +58,16 @@ def locationRecommend(post):
     res = clf.predict(predict_vec)
 
     # print out predictions
-    for k, v in zip(predict, res):
-        print(k, '=>', v)
+    #for k, v in zip(predict, res):
+    #    print(k, '=>', v)
 
-    while True:
-        predict = [input()]
-        predict_vec = vec.transform(predict)
-        res = clf.predict(predict_vec)
-        print(predict[0], '=>', res[0])
-        print (predict_vec)
     
+    predict = [post]
+    predict_vec = vec.transform(predict)
+    res = clf.predict(predict_vec)
+    print(predict[0], '=>', res[0])
     
+    print (predict_vec)
     return (res[0])
 
 def latLong(place):
@@ -82,7 +81,7 @@ def latLong(place):
     return [latitude, longitude]
 
 def nearPlace(lat, long, key):
-
+    
     near = gmaps.places_nearby([lat, long],keyword=key,
                                   language = 'en-AU',
                                   radius = 30)
@@ -100,11 +99,9 @@ def nearPlace(lat, long, key):
     
     print(near)
     print('')
-    print(list)
-    return list
+    return near
 
-l = latLong('Fairfax City')
-places = nearPlace(l[0],l[1], 'resturant')
-#print(places.get('results')[3].get('name'))
+# l = latLong('Fairfax City')
+#places = nearPlace(l[0],l[1], 'resturant')
+# locationRecommend("rework")
 #type(places[0][0])
-locationRecommend('work')
