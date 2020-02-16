@@ -15,8 +15,7 @@ from imageClassify import getAssociations
 # Set API credentials from json
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="scrapeInfo\\image-classification-json.json"
 
-
-driver = webdriver.Chrome("chromedriver")
+driver = webdriver.Chrome("C:\\Program Files (x86)\\webdrivers\\chromedriver.exe")
 
 facebookText = []
 twitterText = []
