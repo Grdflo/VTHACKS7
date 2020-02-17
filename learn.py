@@ -69,7 +69,8 @@ def locationRecommend(post):
     print(predict[0], '=>', res[0])
     
     print (predict_vec)
-    return (random.choice(location))
+    return(random.choice(location))
+    # return res[0]
 
 def latLong(place):
     #given a place - find the location(lat and long) and place_id
@@ -85,10 +86,10 @@ def nearPlace(lat, long, key):
     
     near = gmaps.places_nearby([lat, long],keyword=key,
                                   language = 'en-AU',
-                                  radius = 30)
+                                  radius = 100)
     list = ""
     arr = []
-    for i in range(0,3):
+    for i in range(0,6):
         if (len(near.get('results')) > i):
             #nameRating = [near.get('results')[i].get('name')] 
             #nameRating.append(near.get('results')[i].get('rating'))

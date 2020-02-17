@@ -84,7 +84,7 @@ function displayData() {
             p.className += 'attraction';
             if (i == 0) {
               var textnode =
-                  document.createTextNode(ele[i] + "   " + ele[i + 1]);
+                  document.createTextNode(ele[i] + "\nRating: " + ele[i + 1]);
               p.appendChild(textnode);
               document.getElementById('locations').appendChild(p)
             }
